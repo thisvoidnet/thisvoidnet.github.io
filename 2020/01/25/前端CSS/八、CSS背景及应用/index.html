@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--  -->
+
+  
+  <title>八、CSS背景及应用 | Orcate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="CSS基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="八、CSS背景及应用">
+<meta property="og:url" content="http://yoursite.com/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E5%85%AB%E3%80%81CSS%E8%83%8C%E6%99%AF%E5%8F%8A%E5%BA%94%E7%94%A8/index.html">
+<meta property="og:site_name" content="Orcate">
+<meta property="og:description" content="CSS基础">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-01-25T14:23:35.000Z">
+<meta property="article:modified_time" content="2020-01-28T07:28:19.093Z">
+<meta property="article:author" content="Orcate">
+<meta property="article:tag" content="CSS">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Orcate" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <!-- <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"> -->
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Orcate</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">技能树笔记</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-前端CSS/八、CSS背景及应用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E5%85%AB%E3%80%81CSS%E8%83%8C%E6%99%AF%E5%8F%8A%E5%BA%94%E7%94%A8/" class="article-date">
+  <time datetime="2020-01-25T14:23:35.000Z" itemprop="datePublished">2020-01-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      八、CSS背景及应用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>背景颜色图片及其平铺<br>  background-color                         背景颜色<br>  background-image                         背景图片地址<br>  background-repeat                        是否平铺<br>  background-position                      背景位置<br>  background-attachment                    背景固定还是滚动<br>  背景的合写（复合属性）<br>  background：背景颜色 背景图片地址 背景平铺 背景滚动 背景位置            </p>
+<ol>
+<li>background-repeat<ol>
+<li>repeat-x  水平平铺</li>
+<li>repeat-y  纵向平铺</li>
+<li>no-repeat   不平铺</li>
+<li>repeat     纵横平铺</li>
+<li>round  自动缩放充满整个容器 CSS3</li>
+<li>space 以相同的间距平铺且填充满整个容器或某个方向 CSS3<a id="more"></a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>背景位置1</p>
+<ol>
+<li>background-position :length  ：10px 30px<ol>
+<li>x坐标往右</li>
+<li>y坐标往下</li>
+</ol>
+</li>
+<li>background-position :left、right、center、top、bttom 左右中上下</li>
+<li>复合使用<ol>
+<li>background-position :center 10px   前x轴  后y轴</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>魔兽背景图片</p>
+<pre><code>&lt;style&gt;
+body{
+            background-color: #000;
+            background-image:             url(images/ms.jpg);
+            background-repeat: no-repeat;
+            background-position: center -25px;
+        }
+&lt;/style&gt;</code></pre></li>
+<li><p>背景附着(固定)</p>
+<ol>
+<li>固定<br>background-attachment: fixed;</li>
+<li>滚动<br>background-attachment: scroll;</li>
+</ol>
+</li>
+<li><p>背景简写</p>
+<ol>
+<li>background：背景颜色 背景图片地址 背景平铺 背景滚动 背景位置<br>background:#000 url(images/ms.jpg) no-repeat fixed center 80px;</li>
+</ol>
+</li>
+<li><p>背景半透明<br>background: rgba(0,0,0,0.5);</p>
+</li>
+<li><p>背景缩放</p>
+<ol>
+<li>background-size:<ol>
+<li>宽度 高度 可以只写一个</li>
+<li>百分比，参照盒子的宽高</li>
+<li>cover 自动缩放比例，始终填满盒子，多出部分隐藏</li>
+<li>contain 自动缩放比例，始终显示完整图片</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>多背景图片 CSS3</p>
+<ol>
+<li>背景颜色一定要在最后一组上；<pre><code>&lt;style&gt;
+    body{
+background: url(1.jpg) no-repeat scroll 10px 20px/50px 60px ,
+                        url(2.jpg) no-repeat scroll 10px 20px/50px 60px ,
+                        url(3.jpg) no-repeat scroll 10px 20px/50px 60px  c #aaa;
+    }
+&lt;/style&gt;</code></pre></li>
+</ol>
+</li>
+<li><p>凹凸文字效果（未实现）</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            background:#ccc;
+        }
+        div {
+            color: #ccc;
+            font: 700 80px &quot;微软雅黑&quot;;
+        }
+        .c1 {
+            text-shadow: 1px 1px 1px #000,-1px -1px -1px #fff;
+        }
+        .c2 {
+            text-shadow: -1px -1px -1px #fff, 1px 1px 1px #000;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;c1&quot;&gt;
+        凸起来的文字
+    &lt;/div&gt;
+    &lt;div class=&quot;c2&quot;&gt;
+        凹下去的文字
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></li>
+<li><p>文本装饰 text-decoration<br>  值               描述<br>  none            默认。定义标准的文本<br>  underline       定义文本下的一条线。下划线也是我们链接自带的。<br>  overline        定义文本上的一条线<br>  line-through    定义穿过文本的一条线             </p>
+</li>
+<li><p>王者荣耀导航栏1</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            background:#ccc;
+        }
+        a {
+            width: 200px;
+            height: 50px;
+            background-color: orange;
+            display: inline-block;
+            line-height: 50px;
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+        a:hover{
+            background: url(images/1.jpg) no-repeat ;
+        }
+
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;a href=&quot;#&quot;&gt;专区说明&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;申请资格&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;兑换奖励&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;下载游戏&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E5%85%AB%E3%80%81CSS%E8%83%8C%E6%99%AF%E5%8F%8A%E5%BA%94%E7%94%A8/" data-id="ck5xjxwbf000qgsjsfj009yfg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E4%B9%9D%E3%80%81CSS%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          九、CSS三大特性
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E4%B8%83%E3%80%81CSS%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">七、CSS复合选择器</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python%E9%94%99%E8%AF%AF%E6%94%B6%E9%9B%86/" rel="tag">Python错误收集</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%89%E8%A3%85/" rel="tag">安装</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E4%BA%8C%E5%8D%81%E5%85%AB%E3%80%81%E7%9B%92%E5%AD%90%E6%B0%B4%E5%B9%B3%E5%92%8C%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/">二十八、盒子水平和垂直居中</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E4%BA%8C%E5%8D%81%E4%B8%83%E3%80%81%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA/">二十七、文本溢出</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E4%BA%8C%E5%8D%81%E5%85%AD%E3%80%81CSS3%E5%B0%8F%E9%BB%84%E4%BA%BA%E6%A1%88%E4%BE%8B/">二十六、CSS3小黄人案例</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E4%BA%8C%E5%8D%81%E4%BA%94%E3%80%81CSS%E5%B8%83%E5%B1%80%E6%A1%88%E4%BE%8B/">二十五、CSS布局案例</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E4%BA%8C%E5%8D%81%E5%9B%9B%E3%80%81CSS%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86/">二十四、CSS补充知识</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Orcate<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+<!--  -->
+
+
+  </div>
+</body>
+</html>

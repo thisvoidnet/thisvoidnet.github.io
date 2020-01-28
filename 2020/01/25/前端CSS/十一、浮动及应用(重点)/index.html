@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--  -->
+
+  
+  <title>十一、浮动及应用(重点) | Orcate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="CSS基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="十一、浮动及应用(重点)">
+<meta property="og:url" content="http://yoursite.com/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E5%8D%81%E4%B8%80%E3%80%81%E6%B5%AE%E5%8A%A8%E5%8F%8A%E5%BA%94%E7%94%A8(%E9%87%8D%E7%82%B9)/index.html">
+<meta property="og:site_name" content="Orcate">
+<meta property="og:description" content="CSS基础">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-01-25T14:23:38.000Z">
+<meta property="article:modified_time" content="2020-01-28T07:28:46.923Z">
+<meta property="article:author" content="Orcate">
+<meta property="article:tag" content="CSS">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Orcate" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <!-- <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"> -->
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Orcate</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">技能树笔记</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-前端CSS/十一、浮动及应用(重点)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E5%8D%81%E4%B8%80%E3%80%81%E6%B5%AE%E5%8A%A8%E5%8F%8A%E5%BA%94%E7%94%A8(%E9%87%8D%E7%82%B9)/" class="article-date">
+  <time datetime="2020-01-25T14:23:38.000Z" itemprop="datePublished">2020-01-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      十一、浮动及应用(重点)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>文档流介绍<ol>
+<li>CSS的定位机制<ol>
+<li>普通流</li>
+<li>浮动</li>
+<li>定位</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>浮动是用来做文字环绕效果的<ul>
+<li>float<ul>
+<li>right</li>
+<li>left</li>
+<li>none</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>体会浮动<a id="more"></a></li>
+<li>浮动就是漂浮的意思<ul>
+<li>浮动脱离标准流，不占位置，漂在标准流上面。</li>
+<li>浮动只有左右浮动。</li>
+<li>浮动首先创建包含块的概念。就是说，浮动的元素总是找离他最近的父级元素对齐，但不会超出内边距范围。</li>
+</ul>
+</li>
+<li>浮动首先添加标准流父级<ol>
+<li>先添加父级标准流</li>
+</ol>
+</li>
+<li>浮动特性对齐父盒子</li>
+<li>浮动特性盒子排列</li>
+<li>浮动影响盒子显示模式<ol>
+<li>元素添加浮动后，元素会具有行内块元素的特性。元素的大小完全取决于定义的大小或者默认内容的多少。</li>
+</ol>
+</li>
+<li>浮动总结</li>
+<li>版心和布局流程<ul>
+<li>版心是指网页中主体内容所在的区域。一般在浏览器窗口中水平居中显示，常见的宽度值为960px，980px，1000px，1200px等。</li>
+<li>布局流程<ul>
+<li>确认页面的版心（可视区）</li>
+<li>分析页面中的行模块，以及每个行模块中的列模块</li>
+<li>制作HTML页面，CSS文件</li>
+<li>CSS初始化，然后开始运用盒子模型的原理，通过DIV+CSS布局来控制网页的每个模块。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>一列固定宽度且居中<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .top,
+    .banner,
+    .main,
+    .footer {
+        width: 960px;
+        text-align: center;
+        margin: 0,auto;
+        margin-bottom: 15px;
+    }
+    .top {
+        height: 80px;
+        background-color: pink;
+    }
+    .banner {
+        height: 120px;
+        background-color: purple;
+    }
+    .main {
+        height: 500px;
+        background-color: hotpink;
+    }
+    .footer {
+        height: 150px;
+        background-color: black;
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;top&quot;&gt;top&lt;/div&gt;
+    &lt;div class=&quot;banner&quot;&gt;banner&lt;/div&gt;
+    &lt;div class=&quot;main&quot;&gt;main&lt;/div&gt;
+    &lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></li>
+</ol>
+<ol>
+<li><p>两列左窄右宽型</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .top,
+    .banner,
+    .main,
+    .footer {
+        width: 960px;
+        text-align: center;
+        margin: 0,auto;
+        margin-bottom: 15px;
+    }
+    .top {
+        height: 80px;
+        background-color: pink;
+    }
+    .banner {
+        height: 120px;
+        background-color: purple;
+    }
+    .main {
+        height: 500px;
+        background-color: hotpink;
+    }
+    .footer {
+        height: 150px;
+        background-color: black;
+    }
+    .left {
+        width: 360px;
+        height: 500px;
+        background-color: #fff;
+        float: left;
+
+    }
+    .right {
+        width: 600px;
+        height: 500px;
+        float: left;
+        background-color: green;
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;top&quot;&gt;top&lt;/div&gt;
+    &lt;div class=&quot;banner&quot;&gt;banner&lt;/div&gt;
+    &lt;div class=&quot;main&quot;&gt;
+        &lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;
+        &lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><p> 通栏平均分布型</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E5%8D%81%E4%B8%80%E3%80%81%E6%B5%AE%E5%8A%A8%E5%8F%8A%E5%BA%94%E7%94%A8(%E9%87%8D%E7%82%B9)/" data-id="ck5xjxwbh000wgsjs7rz69jpo" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E5%8D%81%E4%BA%8C%E3%80%81%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          十二、清除浮动
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E5%8D%81%E3%80%81CSS%E7%9B%92%E6%A8%A1%E5%9E%8B%E5%8F%8A%E5%BA%94%E7%94%A8(%E9%87%8D%E7%82%B9)/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">十、CSS盒模型及应用(重点)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python%E9%94%99%E8%AF%AF%E6%94%B6%E9%9B%86/" rel="tag">Python错误收集</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%89%E8%A3%85/" rel="tag">安装</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E4%BA%8C%E5%8D%81%E5%85%AB%E3%80%81%E7%9B%92%E5%AD%90%E6%B0%B4%E5%B9%B3%E5%92%8C%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/">二十八、盒子水平和垂直居中</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E4%BA%8C%E5%8D%81%E4%B8%83%E3%80%81%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA/">二十七、文本溢出</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E4%BA%8C%E5%8D%81%E5%85%AD%E3%80%81CSS3%E5%B0%8F%E9%BB%84%E4%BA%BA%E6%A1%88%E4%BE%8B/">二十六、CSS3小黄人案例</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E4%BA%8C%E5%8D%81%E4%BA%94%E3%80%81CSS%E5%B8%83%E5%B1%80%E6%A1%88%E4%BE%8B/">二十五、CSS布局案例</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/25/%E5%89%8D%E7%AB%AFCSS/%E4%BA%8C%E5%8D%81%E5%9B%9B%E3%80%81CSS%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86/">二十四、CSS补充知识</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Orcate<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+<!--  -->
+
+
+  </div>
+</body>
+</html>
